@@ -55,9 +55,13 @@ enum Query {
             sortBy: $sortBy, sortDir: $sortDir, start: $start, tag: $tag, releaseDate: $releaseDate) {
               elements {
                 title id namespace description
+                keyImages {
+                  type url
+                }
                 seller {
                   name
                 }
+                productSlug
                 price (country: $country) {
                   totalPrice {
                     discountPrice originalPrice voucherDiscount discount currencyCode
